@@ -1,0 +1,383 @@
+# PROMPT MAESTRO — 6 GUÍAS EN LATEX PARA TUTORÍAS
+# Copia y pega cada bloque numerado por separado en una nueva conversación.
+# Cada bloque es un prompt independiente y completo.
+
+══════════════════════════════════════════════════════════════════
+INSTRUCCIONES DE USO
+══════════════════════════════════════════════════════════════════
+1. Abre una conversación nueva para cada PDF.
+2. Copia y pega el prompt completo del bloque correspondiente.
+3. La IA te entregará el código LaTeX completo.
+4. Copia ese código en un archivo .tex
+5. Compílalo con pdflatex (online: overleaf.com — gratis)
+6. Guarda el PDF con el nombre exacto indicado en cada bloque.
+
+══════════════════════════════════════════════════════════════════
+PDF 1 — Integrales de línea y superficie
+Nombre del archivo: guia-integrales-linea-superficie.pdf
+══════════════════════════════════════════════════════════════════
+
+Eres un experto en matemáticas universitarias y comunicación pedagógica en LaTeX.
+
+Genera el código LaTeX COMPLETO y COMPILABLE de una guía académica de estudio titulada:
+
+**"Guía de Estudio: Integrales de Línea y Superficie"**
+Subtítulo: Cálculo en Varias Variables — Nivel Universitario
+
+El documento debe seguir esta estructura exacta:
+
+---
+
+SECCIÓN 1 — RESUMEN CONCEPTUAL
+Explica con claridad y precisión:
+- Definición de integral de línea de campo escalar: ∫_C f ds
+- Definición de integral de línea de campo vectorial: ∫_C F·dr
+- Parametrización de curvas y cálculo del diferencial de arco ds
+- Teorema de Green (enunciado y condiciones)
+- Definición de integral de superficie de campo escalar
+- Definición de integral de flujo de campo vectorial: ∬_S F·dS
+- Teorema de Stokes (enunciado y condiciones)
+- Teorema de la divergencia de Gauss (enunciado y condiciones)
+
+SECCIÓN 2 — FÓRMULAS Y DEFINICIONES CLAVE
+Una tabla o listado de las fórmulas fundamentales con notación LaTeX correcta:
+- Integral de línea escalar y vectorial
+- Teorema de Green, Stokes y Gauss
+- Diferencial de área de superficie dS para superficie z=g(x,y)
+
+SECCIÓN 3 — GUÍA DE EJERCICIOS (12 ejercicios)
+Distribuidos así:
+- Ejercicios 1-4: Integrales de línea (2 escalares, 2 vectoriales)
+- Ejercicios 5-8: Aplicación del Teorema de Green
+- Ejercicios 9-12: Integrales de superficie y flujo
+
+Cada ejercicio debe tener:
+- Enunciado claro con datos completos
+- Espacio visual ("_________________________") para que el estudiante resuelva
+
+SECCIÓN 4 — SOLUCIONARIO COMPLETO
+Resuelve los 12 ejercicios anteriores mostrando:
+- Paso 1: Identificación del problema y estrategia
+- Pasos intermedios con cada operación matemática justificada
+- Resultado final encuadrado con \boxed{}
+- Observación pedagógica al final de cada ejercicio (1-2 líneas)
+
+---
+
+REQUISITOS DE FORMATO LaTeX:
+- Usa el paquete geometry con márgenes: top=2.5cm, bottom=2.5cm, left=2.8cm, right=2.8cm
+- Fuente principal: \usepackage[T1]{fontenc} y \usepackage{lmodern}
+- Paquetes matemáticos: amsmath, amssymb, amsthm
+- Usa \usepackage{tcolorbox} para recuadrar definiciones importantes
+- Usa \usepackage{enumitem} para listas personalizadas
+- Encabezado con: título + "Tutorías de Matemáticas y Física — Valparaíso"
+- Pie de página con número de página
+- Color institucional (azul oscuro #1a3a6e) para títulos de sección: usa \usepackage{xcolor} y \usepackage{titlesec}
+- Tabla de contenidos al inicio
+- El documento completo debe compilar sin errores en pdflatex
+
+Entrega SOLO el código LaTeX completo, empezando por \documentclass y terminando en \end{document}. Sin explicaciones antes ni después del código.
+
+══════════════════════════════════════════════════════════════════
+PDF 2 — Ecuaciones de Maxwell
+Nombre del archivo: resumen-ecuaciones-maxwell.pdf
+══════════════════════════════════════════════════════════════════
+
+Eres un experto en física universitaria y comunicación pedagógica en LaTeX.
+
+Genera el código LaTeX COMPLETO y COMPILABLE de una guía académica de estudio titulada:
+
+**"Resumen y Guía: Ecuaciones de Maxwell"**
+Subtítulo: Electromagnetismo Universitario — Nivel Universitario
+
+El documento debe seguir esta estructura exacta:
+
+---
+
+SECCIÓN 1 — RESUMEN CONCEPTUAL
+Explica con claridad y precisión:
+- Contexto histórico y significado físico de las 4 ecuaciones de Maxwell
+- Ley de Gauss para el campo eléctrico (forma integral y diferencial)
+- Ley de Gauss para el campo magnético (forma integral y diferencial)
+- Ley de Faraday de inducción (forma integral y diferencial)
+- Ley de Ampère-Maxwell con corriente de desplazamiento (forma integral y diferencial)
+- Significado físico de cada ecuación (párrafo explicativo breve por cada una)
+- Ondas electromagnéticas: deducción de la ecuación de onda a partir de Maxwell
+- Velocidad de la luz como consecuencia de Maxwell: c = 1/√(ε₀μ₀)
+
+SECCIÓN 2 — FÓRMULAS Y DEFINICIONES CLAVE
+Tabla con las 4 ecuaciones en forma integral y diferencial, usando notación LaTeX estándar con \nabla, \oint, \oiint (paquete esint), \mathbf para vectores.
+
+SECCIÓN 3 — GUÍA DE EJERCICIOS (10 ejercicios)
+Distribuidos así:
+- Ejercicios 1-3: Aplicación de Ley de Gauss eléctrica (cálculo de campo E)
+- Ejercicios 4-5: Ley de Gauss magnética y análisis de campo B
+- Ejercicios 6-7: Ley de Faraday y fem inducida
+- Ejercicios 8-10: Ley de Ampère y campo magnético de conductores
+
+Cada ejercicio: enunciado completo + espacio para resolución del estudiante.
+
+SECCIÓN 4 — SOLUCIONARIO COMPLETO
+Resuelve los 10 ejercicios mostrando:
+- Identificación de la ley aplicable
+- Elección de superficie/camino gaussiano con justificación
+- Desarrollo matemático paso a paso
+- Resultado final con \boxed{}
+- Observación física relevante
+
+---
+
+REQUISITOS DE FORMATO LaTeX: (idénticos al PDF 1)
+- geometry: top=2.5cm, bottom=2.5cm, left=2.8cm, right=2.8cm
+- Paquetes: fontenc, lmodern, amsmath, amssymb, amsthm, tcolorbox, enumitem, xcolor, titlesec, esint
+- Encabezado: título + "Tutorías de Matemáticas y Física — Valparaíso"
+- Pie de página numerado
+- Color azul oscuro para secciones
+- Tabla de contenidos
+
+Entrega SOLO el código LaTeX completo. Sin texto antes ni después.
+
+══════════════════════════════════════════════════════════════════
+PDF 3 — Álgebra Lineal: Espacios Vectoriales
+Nombre del archivo: guia-algebra-lineal-espacios-vectoriales.pdf
+══════════════════════════════════════════════════════════════════
+
+Eres un experto en álgebra lineal y comunicación pedagógica en LaTeX.
+
+Genera el código LaTeX COMPLETO y COMPILABLE de una guía académica titulada:
+
+**"Guía de Estudio: Álgebra Lineal — Espacios Vectoriales"**
+Subtítulo: Transformaciones Lineales, Bases y Diagonalización — Nivel Universitario
+
+El documento debe seguir esta estructura exacta:
+
+---
+
+SECCIÓN 1 — RESUMEN CONCEPTUAL
+Explica con claridad:
+- Definición de espacio vectorial y sus 8 axiomas
+- Subespacio vectorial: definición y criterio de verificación
+- Dependencia e independencia lineal
+- Base y dimensión de un espacio vectorial
+- Coordenadas de un vector respecto a una base
+- Transformaciones lineales: definición, núcleo e imagen
+- Matriz de una transformación lineal respecto a una base
+- Valores y vectores propios: definición y significado geométrico
+- Diagonalización: cuándo es posible y cómo realizarla
+- Producto interno y espacios de Hilbert (introducción breve)
+
+SECCIÓN 2 — FÓRMULAS Y DEFINICIONES CLAVE
+- Criterio de subespacio (3 condiciones)
+- Fórmula del polinomio característico: det(A - λI) = 0
+- Proceso de Gram-Schmidt
+- Teorema del rango-nulidad: dim(ker T) + dim(Im T) = dim(V)
+
+SECCIÓN 3 — GUÍA DE EJERCICIOS (14 ejercicios)
+- Ejercicios 1-3: Verificación de subespacios
+- Ejercicios 4-6: Bases, independencia lineal y cambio de base
+- Ejercicios 7-9: Transformaciones lineales, núcleo e imagen
+- Ejercicios 10-12: Valores y vectores propios
+- Ejercicios 13-14: Diagonalización de matrices
+
+Cada ejercicio: enunciado completo + espacio para resolución.
+
+SECCIÓN 4 — SOLUCIONARIO COMPLETO
+Cada ejercicio resuelto paso a paso con:
+- Estrategia de resolución explícita
+- Operaciones matriciales mostradas con \begin{pmatrix}
+- Resultados con \boxed{}
+- Interpretación geométrica cuando sea relevante
+
+---
+
+REQUISITOS DE FORMATO LaTeX: (idénticos al PDF 1)
+Entrega SOLO el código LaTeX completo. Sin texto antes ni después.
+
+══════════════════════════════════════════════════════════════════
+PDF 4 — Ecuaciones Diferenciales Ordinarias
+Nombre del archivo: guia-ecuaciones-diferenciales-ordinarias.pdf
+══════════════════════════════════════════════════════════════════
+
+Eres un experto en ecuaciones diferenciales y comunicación pedagógica en LaTeX.
+
+Genera el código LaTeX COMPLETO y COMPILABLE de una guía académica titulada:
+
+**"Guía de Estudio: Ecuaciones Diferenciales Ordinarias"**
+Subtítulo: EDO de Primer y Segundo Orden — Nivel Universitario
+
+El documento debe seguir esta estructura exacta:
+
+---
+
+SECCIÓN 1 — RESUMEN CONCEPTUAL
+Explica con claridad:
+- Clasificación de EDO: orden, linealidad, homogeneidad
+- EDO de variables separables: método y condiciones
+- EDO lineales de primer orden: factor integrante μ(x)
+- EDO exactas: condición de exactitud ∂M/∂y = ∂N/∂x y factor integrante
+- EDO de Bernoulli: sustitución v = y^(1-n)
+- EDO lineales de segundo orden homogéneas con coeficientes constantes
+  - Caso raíces reales distintas
+  - Caso raíces reales repetidas
+  - Caso raíces complejas conjugadas
+- Método de variación de parámetros
+- Método de coeficientes indeterminados
+- Aplicaciones: circuitos RC, oscilador masa-resorte, crecimiento poblacional
+
+SECCIÓN 2 — FÓRMULAS Y DEFINICIONES CLAVE
+- Solución general de EDO lineal de primer orden
+- Solución general para cada caso de EDO de segundo orden
+- Wronskiano y su uso para independencia lineal
+
+SECCIÓN 3 — GUÍA DE EJERCICIOS (14 ejercicios)
+- Ejercicios 1-3: Variables separables
+- Ejercicios 4-6: EDO lineal de primer orden (factor integrante)
+- Ejercicios 7-8: EDO exactas
+- Ejercicios 9-11: EDO de segundo orden homogéneas (un caso de cada tipo)
+- Ejercicios 12-13: Coeficientes indeterminados
+- Ejercicio 14: Problema de aplicación física (masa-resorte o circuito RC)
+
+Cada ejercicio: enunciado + espacio para resolución.
+
+SECCIÓN 4 — SOLUCIONARIO COMPLETO
+Cada ejercicio resuelto mostrando:
+- Clasificación de la EDO
+- Método elegido con justificación
+- Desarrollo paso a paso
+- Aplicación de condiciones iniciales si corresponde
+- Resultado con \boxed{}
+
+---
+
+REQUISITOS DE FORMATO LaTeX: (idénticos al PDF 1)
+Entrega SOLO el código LaTeX completo. Sin texto antes ni después.
+
+══════════════════════════════════════════════════════════════════
+PDF 5 — Termodinámica: Leyes Fundamentales
+Nombre del archivo: resumen-termodinamica-leyes-fundamentales.pdf
+══════════════════════════════════════════════════════════════════
+
+Eres un experto en termodinámica universitaria y comunicación pedagógica en LaTeX.
+
+Genera el código LaTeX COMPLETO y COMPILABLE de una guía académica titulada:
+
+**"Resumen y Guía: Termodinámica — Leyes Fundamentales"**
+Subtítulo: Principios, Ciclos y Entropía — Nivel Universitario
+
+El documento debe seguir esta estructura exacta:
+
+---
+
+SECCIÓN 1 — RESUMEN CONCEPTUAL
+Explica con claridad:
+- Conceptos base: sistema, frontera, entorno, estado, proceso, equilibrio
+- Ley cero de la termodinámica: equilibrio térmico y temperatura
+- Primera ley: ΔU = Q - W, significado físico de cada término
+  - Procesos isotérmico, isobárico, isocórico, adiabático
+  - Calor específico Cv y Cp para gases ideales
+- Segunda ley: enunciados de Kelvin-Planck y Clausius
+  - Procesos reversibles e irreversibles
+  - Ciclo de Carnot: descripción y eficiencia η = 1 - T_c/T_h
+- Entropía: definición dS = δQ_rev/T, interpretación estadística
+  - Principio de aumento de entropía
+  - Entropía en procesos ideales: ΔS para gas ideal
+- Tercera ley: entropía en el cero absoluto
+- Funciones termodinámicas: energía libre de Helmholtz F y de Gibbs G
+
+SECCIÓN 2 — FÓRMULAS Y DEFINICIONES CLAVE
+- Primera ley para procesos particulares
+- Eficiencia de Carnot
+- Variación de entropía para gas ideal: ΔS = nCv ln(T2/T1) + nR ln(V2/V1)
+- Relaciones de Maxwell termodinámicas
+
+SECCIÓN 3 — GUÍA DE EJERCICIOS (12 ejercicios)
+- Ejercicios 1-3: Primera ley en procesos de gas ideal
+- Ejercicios 4-5: Ciclo de Carnot y eficiencia
+- Ejercicios 6-7: Ciclos termodinámicos (Otto o Diesel)
+- Ejercicios 8-10: Cálculo de variación de entropía
+- Ejercicios 11-12: Funciones de Gibbs y Helmholtz
+
+Cada ejercicio: enunciado + espacio para resolución.
+
+SECCIÓN 4 — SOLUCIONARIO COMPLETO
+Cada ejercicio resuelto con:
+- Identificación del proceso o ciclo
+- Aplicación de la ley correspondiente
+- Cálculo numérico explícito
+- Resultado con \boxed{}
+- Comentario físico o termodinámico breve
+
+---
+
+REQUISITOS DE FORMATO LaTeX: (idénticos al PDF 1)
+Entrega SOLO el código LaTeX completo. Sin texto antes ni después.
+
+══════════════════════════════════════════════════════════════════
+PDF 6 — Trigonometría Completa (Escolar)
+Nombre del archivo: guia-trigonometria-escolar.pdf
+══════════════════════════════════════════════════════════════════
+
+Eres un experto en matemáticas escolares y comunicación pedagógica en LaTeX.
+
+Genera el código LaTeX COMPLETO y COMPILABLE de una guía académica titulada:
+
+**"Guía de Estudio: Trigonometría Completa"**
+Subtítulo: Educación Media y Preuniversitario — PAES
+
+El documento debe seguir esta estructura exacta:
+
+---
+
+SECCIÓN 1 — RESUMEN CONCEPTUAL
+Explica con claridad y lenguaje accesible:
+- El círculo unitario: definición y utilidad
+- Razones trigonométricas: seno, coseno, tangente, secante, cosecante, cotangente
+  - Definición en triángulo rectángulo (SOH-CAH-TOA)
+  - Definición en el círculo unitario
+- Ángulos especiales: 0°, 30°, 45°, 60°, 90° y sus valores exactos
+- Signos por cuadrante (regla ASTC)
+- Identidades trigonométricas fundamentales:
+  - sin²θ + cos²θ = 1 y sus derivadas
+  - Identidades de ángulo doble
+  - Identidades de suma y diferencia de ángulos
+- Funciones trigonométricas:
+  - Gráficas de seno y coseno: amplitud, período, desfase
+  - Gráfica de tangente
+- Ley del seno y ley del coseno (triángulos generales)
+- Ecuaciones trigonométricas simples: sin(x) = a, cos(x) = a
+
+SECCIÓN 2 — TABLA DE ÁNGULOS ESPECIALES
+Tabla LaTeX completa con ángulos 0°, 30°, 45°, 60°, 90°, 120°, 135°, 150°, 180° y sus valores de sin, cos y tan.
+
+SECCIÓN 3 — GUÍA DE EJERCICIOS (16 ejercicios)
+- Ejercicios 1-4: Razones trigonométricas en triángulo rectángulo
+- Ejercicios 5-7: Identidades y simplificaciones
+- Ejercicios 8-10: Funciones trigonométricas y sus gráficas (análisis de parámetros)
+- Ejercicios 11-13: Ley del seno y del coseno
+- Ejercicios 14-16: Ecuaciones trigonométricas simples
+
+Cada ejercicio: enunciado con datos completos + espacio para resolución.
+
+SECCIÓN 4 — SOLUCIONARIO COMPLETO
+Cada ejercicio resuelto mostrando:
+- Identificación de la razón o identidad a aplicar
+- Desarrollo paso a paso con lenguaje claro (nivel escolar)
+- Resultado con \boxed{}
+- Tip o recordatorio pedagógico en una caja de color
+
+---
+
+REQUISITOS DE FORMATO LaTeX:
+- geometry: top=2.5cm, bottom=2.5cm, left=2.8cm, right=2.8cm
+- Paquetes: fontenc, lmodern, amsmath, amssymb, tcolorbox, enumitem, xcolor, titlesec, booktabs (para tabla), tikz (para círculo unitario simple)
+- Encabezado: título + "Tutorías de Matemáticas y Física — Valparaíso"
+- Pie de página numerado
+- Color azul oscuro para secciones
+- Tabla de contenidos
+- Estilo más visual y amigable que los otros PDFs (nivel escolar)
+
+Entrega SOLO el código LaTeX completo. Sin texto antes ni después.
+
+══════════════════════════════════════════════════════════════════
+FIN DEL PROMPT MAESTRO
+══════════════════════════════════════════════════════════════════

@@ -1,0 +1,567 @@
+═══════════════════════════════════════════════════════════════════
+PROMPT MAESTRO — 6 GUÍAS EN LATEX PARA TUTORÍAS
+Optimizado para: DeepSeek
+Nivel: Mixto (escolar + universitario)
+Contenido: Resumen conceptual + Fórmulas clave + Ejercicios resueltos
+═══════════════════════════════════════════════════════════════════
+
+INSTRUCCIONES DE USO
+───────────────────────────────────────────────────────────────────
+1. Abre chat.deepseek.com
+2. Inicia una conversación NUEVA para cada PDF (no mezcles)
+3. Copia y pega el bloque completo del PDF que quieras
+4. DeepSeek te entregará el código LaTeX completo
+5. Ve a overleaf.com → New Project → Blank Project
+6. Borra el contenido por defecto y pega el código
+7. Haz clic en "Recompile" y descarga el PDF
+8. Guárdalo con el nombre exacto indicado en cada bloque
+
+NOTA PARA DEEPSEEK: Si el código es muy largo, DeepSeek puede
+cortarlo. En ese caso, escribe "continúa desde donde quedaste"
+y luego une ambas partes en Overleaf.
+───────────────────────────────────────────────────────────────────
+
+
+═══════════════════════════════════════════════════════════════════
+PDF 1 DE 6
+Archivo: guia-integrales-linea-superficie.pdf
+═══════════════════════════════════════════════════════════════════
+
+Actúa como un profesor universitario de matemáticas experto en LaTeX y pedagogía científica.
+
+Genera el código LaTeX COMPLETO y COMPILABLE en pdflatex de una guía de estudio titulada:
+
+"Guía de Estudio: Integrales de Línea y Superficie"
+Subtítulo: Cálculo en Varias Variables
+
+ESTRUCTURA OBLIGATORIA DEL DOCUMENTO:
+
+────────────────────────────────────────
+PARTE 1 — RESUMEN CONCEPTUAL
+────────────────────────────────────────
+Redacta explicaciones claras y precisas de:
+
+- Curvas en el espacio: parametrización r(t) y diferencial de arco ds = |r'(t)| dt
+- Integral de línea escalar: definición de ∫_C f ds e interpretación geométrica
+- Integral de línea vectorial: definición de ∫_C F·dr y relación con trabajo
+- Orientación de curvas y curvas cerradas
+- Teorema de Green: enunciado, condiciones y relación con integrales dobles
+- Superficies: parametrización r(u,v) y vector normal dS = r_u × r_v du dv
+- Integral de superficie escalar y su interpretación
+- Integral de flujo: ∬_S F·dS e interpretación física
+- Teorema de Stokes: enunciado y relación con Teorema de Green
+- Teorema de la divergencia de Gauss: enunciado y aplicaciones físicas
+
+Usa un recuadro tcolorbox de color azul claro para destacar cada definición importante.
+
+────────────────────────────────────────
+PARTE 2 — FÓRMULAS Y DEFINICIONES CLAVE
+────────────────────────────────────────
+Presenta en una tabla limpia (booktabs) o lista formateada:
+
+- Integral de línea escalar: ∫_C f ds = ∫_a^b f(r(t))|r'(t)| dt
+- Integral de línea vectorial: ∫_C F·dr = ∫_a^b F(r(t))·r'(t) dt
+- Teorema de Green: ∮_C P dx + Q dy = ∬_D (∂Q/∂x − ∂P/∂y) dA
+- Diferencial de superficie: dS = |r_u × r_v| du dv
+- Integral de flujo: ∬_S F·dS = ∬_D F(r(u,v))·(r_u × r_v) du dv
+- Teorema de Stokes: ∮_C F·dr = ∬_S (∇×F)·dS
+- Teorema de Gauss: ∯_S F·dS = ∭_V (∇·F) dV
+
+────────────────────────────────────────
+PARTE 3 — EJERCICIOS RESUELTOS PASO A PASO
+────────────────────────────────────────
+Incluye exactamente 10 ejercicios resueltos. Distribución por nivel:
+
+NIVEL ESCOLAR/INTRODUCTORIO (ejercicios 1 a 4):
+- Ej 1: Calcular ∫_C f ds donde C es un segmento de recta simple
+- Ej 2: Calcular el trabajo de un campo vectorial F sobre una parábola
+- Ej 3: Aplicar Teorema de Green en una región rectangular
+- Ej 4: Calcular integral de superficie sobre un plano inclinado simple
+
+NIVEL UNIVERSITARIO (ejercicios 5 a 10):
+- Ej 5: Integral de línea vectorial sobre una hélice
+- Ej 6: Verificar y aplicar Teorema de Green con campo no trivial
+- Ej 7: Calcular flujo de F a través de un cilindro usando parametrización
+- Ej 8: Aplicar Teorema de Stokes para transformar integral de línea en superficie
+- Ej 9: Aplicar Teorema de Gauss para calcular flujo total
+- Ej 10: Problema integrador: elegir el teorema más eficiente y justificar
+
+Para CADA ejercicio usa esta estructura fija:
+\textbf{Enunciado:} [texto del problema con datos numéricos concretos]
+\textbf{Solución:}
+  Paso 1 — [nombre del paso]: [desarrollo]
+  Paso 2 — [nombre del paso]: [desarrollo]
+  ... (tantos pasos como sean necesarios)
+\textbf{Resultado:} \boxed{...}
+\textbf{Nota pedagógica:} [observación de 1-2 líneas sobre la estrategia o concepto clave]
+
+────────────────────────────────────────
+CONFIGURACIÓN LaTeX OBLIGATORIA:
+────────────────────────────────────────
+\documentclass[12pt,a4paper]{article}
+
+Paquetes requeridos (todos):
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{lmodern}
+\usepackage[top=2.5cm,bottom=2.5cm,left=2.8cm,right=2.8cm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{esint}          % para \oiint y \oiiint
+\usepackage[most]{tcolorbox}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!60!black]{hyperref}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+
+Color principal: define \definecolor{azulacad}{RGB}{26,58,110}
+Títulos de sección en azulacad con titlesec
+Encabezado (fancyhdr): izquierda = título corto | derecha = "Tutorías de Matemáticas y Física — Valparaíso"
+Pie de página: número de página centrado
+Tabla de contenidos al inicio con \tableofcontents y \newpage
+
+El documento debe compilar en pdflatex SIN ERRORES y SIN paquetes que requieran XeLaTeX o LuaLaTeX.
+
+Responde ÚNICAMENTE con el código LaTeX completo. Empieza con \documentclass y termina con \end{document}. Cero texto antes ni después.
+
+
+═══════════════════════════════════════════════════════════════════
+PDF 2 DE 6
+Archivo: resumen-ecuaciones-maxwell.pdf
+═══════════════════════════════════════════════════════════════════
+
+Actúa como un profesor universitario de física experto en LaTeX y pedagogía científica.
+
+Genera el código LaTeX COMPLETO y COMPILABLE en pdflatex de una guía de estudio titulada:
+
+"Resumen y Guía: Ecuaciones de Maxwell"
+Subtítulo: Electromagnetismo Universitario
+
+ESTRUCTURA OBLIGATORIA DEL DOCUMENTO:
+
+────────────────────────────────────────
+PARTE 1 — RESUMEN CONCEPTUAL
+────────────────────────────────────────
+Redacta explicaciones claras de:
+
+- Contexto histórico: qué unificó Maxwell y por qué es revolucionario
+- Ley de Gauss eléctrica: forma integral ∮ E·dA = Q_enc/ε₀ y diferencial ∇·E = ρ/ε₀
+  Significado físico: las cargas son fuentes del campo eléctrico
+- Ley de Gauss magnética: forma integral ∮ B·dA = 0 y diferencial ∇·B = 0
+  Significado físico: no existen monopolos magnéticos
+- Ley de Faraday: forma integral ∮ E·dl = −dΦ_B/dt y diferencial ∇×E = −∂B/∂t
+  Significado físico: campo magnético variable genera campo eléctrico
+- Ley de Ampère-Maxwell: forma integral y diferencial ∇×B = μ₀J + μ₀ε₀ ∂E/∂t
+  Significado físico: corriente y campo eléctrico variable generan campo magnético
+- Corriente de desplazamiento: qué es y por qué Maxwell la añadió
+- Ondas electromagnéticas: deducción simplificada de la ecuación de onda
+- Velocidad de la luz: c = 1/√(ε₀μ₀), valor numérico y consecuencias
+
+Usa tcolorbox azul para cada ecuación de Maxwell al presentarla.
+
+────────────────────────────────────────
+PARTE 2 — FÓRMULAS Y DEFINICIONES CLAVE
+────────────────────────────────────────
+Tabla con las 4 ecuaciones en forma integral Y diferencial:
+| Nombre | Forma integral | Forma diferencial |
+
+También incluye:
+- Constantes: ε₀ = 8.85×10⁻¹² C²/Nm², μ₀ = 4π×10⁻⁷ T·m/A
+- Velocidad de la luz: c = 3×10⁸ m/s
+- Ecuación de onda: ∇²E = μ₀ε₀ ∂²E/∂t²
+
+────────────────────────────────────────
+PARTE 3 — EJERCICIOS RESUELTOS PASO A PASO
+────────────────────────────────────────
+Incluye exactamente 10 ejercicios resueltos. Distribución por nivel:
+
+NIVEL ESCOLAR/INTRODUCTORIO (ejercicios 1 a 4):
+- Ej 1: Campo eléctrico de una esfera cargada usando Ley de Gauss (superficie gaussiana esférica)
+- Ej 2: Campo eléctrico de un plano infinito cargado (superficie gaussiana cilíndrica)
+- Ej 3: Calcular la fem inducida en una espira circular con flujo magnético variable lineal
+- Ej 4: Campo magnético dentro de un solenoide usando Ley de Ampère
+
+NIVEL UNIVERSITARIO (ejercicios 5 a 10):
+- Ej 5: Campo eléctrico de una esfera con carga volumétrica no uniforme ρ(r)
+- Ej 6: Verificar que ∇·B = 0 para el campo de un dipolo magnético dado B(r)
+- Ej 7: Calcular la corriente de desplazamiento en un capacitor en carga
+- Ej 8: Aplicar Ley de Faraday diferencial: dado B(x,t) encontrar E(x,t)
+- Ej 9: Verificar que una onda plana E = E₀ cos(kx−ωt) ŷ satisface las ecuaciones de Maxwell
+- Ej 10: Calcular la intensidad y el vector de Poynting S = (1/μ₀) E×B de una onda EM
+
+Para CADA ejercicio:
+\textbf{Enunciado:} [datos concretos con valores numéricos cuando aplique]
+\textbf{Ley/Ecuación aplicada:} [identificar cuál de las 4 ecuaciones se usa]
+\textbf{Solución:}
+  Paso 1 — [nombre]: [desarrollo]
+  Paso 2 — [nombre]: [desarrollo]
+  ...
+\textbf{Resultado:} \boxed{...}
+\textbf{Nota física:} [observación de 1-2 líneas sobre el significado físico]
+
+────────────────────────────────────────
+CONFIGURACIÓN LaTeX OBLIGATORIA: (idéntica al PDF 1)
+────────────────────────────────────────
+Mismos paquetes, mismo estilo, mismo encabezado.
+Color principal azulacad = RGB(26,58,110).
+Compilable en pdflatex sin errores.
+
+Responde ÚNICAMENTE con el código LaTeX completo. Empieza con \documentclass y termina con \end{document}.
+
+
+═══════════════════════════════════════════════════════════════════
+PDF 3 DE 6
+Archivo: guia-algebra-lineal-espacios-vectoriales.pdf
+═══════════════════════════════════════════════════════════════════
+
+Actúa como un profesor universitario de álgebra lineal experto en LaTeX y pedagogía científica.
+
+Genera el código LaTeX COMPLETO y COMPILABLE en pdflatex de una guía de estudio titulada:
+
+"Guía de Estudio: Álgebra Lineal — Espacios Vectoriales"
+Subtítulo: Transformaciones Lineales, Bases y Diagonalización
+
+ESTRUCTURA OBLIGATORIA DEL DOCUMENTO:
+
+────────────────────────────────────────
+PARTE 1 — RESUMEN CONCEPTUAL
+────────────────────────────────────────
+Redacta explicaciones claras de:
+
+- Espacio vectorial: definición axiomática (los 8 axiomas) con ejemplos: ℝⁿ, matrices, polinomios
+- Subespacio vectorial: definición y criterio de verificación (3 condiciones)
+- Combinación lineal y conjunto generador
+- Dependencia e independencia lineal: definición y método de verificación (determinante / Gauss)
+- Base de un espacio vectorial: definición, existencia y unicidad de coordenadas
+- Dimensión: definición y ejemplos
+- Cambio de base: matriz de cambio P y fórmula de transformación de coordenadas
+- Transformaciones lineales: definición, ejemplos (rotación, proyección, derivada)
+- Núcleo (ker T) e imagen (Im T): definición y cálculo
+- Teorema rango-nulidad: dim(ker T) + dim(Im T) = dim(V), con demostración breve
+- Valores y vectores propios: ecuación det(A − λI) = 0 e interpretación geométrica
+- Diagonalización: condición (n vectores propios LI), proceso y aplicaciones
+
+────────────────────────────────────────
+PARTE 2 — FÓRMULAS Y DEFINICIONES CLAVE
+────────────────────────────────────────
+- Los 8 axiomas de espacio vectorial en lista numerada
+- Criterio de subespacio (3 condiciones)
+- Polinomio característico: p(λ) = det(A − λI)
+- Teorema rango-nulidad
+- Proceso de diagonalización: A = PDP⁻¹
+- Ortogonalización de Gram-Schmidt (fórmula)
+
+────────────────────────────────────────
+PARTE 3 — EJERCICIOS RESUELTOS PASO A PASO
+────────────────────────────────────────
+Incluye exactamente 12 ejercicios resueltos. Distribución por nivel:
+
+NIVEL ESCOLAR/INTRODUCTORIO (ejercicios 1 a 5):
+- Ej 1: Verificar si un conjunto es subespacio de ℝ³ (ejemplo sencillo con plano que pasa por el origen)
+- Ej 2: Determinar si 3 vectores en ℝ³ son LI usando determinante
+- Ej 3: Encontrar base y dimensión del espacio nulo de una matriz 3×3 (Gauss simple)
+- Ej 4: Calcular valores propios de una matriz 2×2
+- Ej 5: Diagonalizar una matriz 2×2 con valores propios distintos
+
+NIVEL UNIVERSITARIO (ejercicios 6 a 12):
+- Ej 6: Verificar que el conjunto de polinomios de grado ≤ 2 es espacio vectorial
+- Ej 7: Encontrar base del núcleo e imagen de una transformación lineal T: ℝ⁴ → ℝ³
+- Ej 8: Verificar el teorema rango-nulidad en el ejercicio anterior
+- Ej 9: Encontrar la matriz de una transformación lineal respecto a una base no canónica
+- Ej 10: Calcular valores y vectores propios de una matriz 3×3
+- Ej 11: Diagonalizar una matriz 3×3 (si es diagonalizable) y calcular A⁵ usando D⁵
+- Ej 12: Aplicar Gram-Schmidt para ortonormalizar una base de ℝ³
+
+Para CADA ejercicio, mostrar matrices con \begin{pmatrix}, resultado con \boxed{}.
+Estructura: Enunciado → Estrategia → Pasos → Resultado → Nota pedagógica.
+
+────────────────────────────────────────
+CONFIGURACIÓN LaTeX OBLIGATORIA: (idéntica al PDF 1)
+────────────────────────────────────────
+Mismos paquetes, mismo estilo, mismo encabezado.
+Color principal azulacad = RGB(26,58,110).
+Compilable en pdflatex sin errores.
+
+Responde ÚNICAMENTE con el código LaTeX completo. Empieza con \documentclass y termina con \end{document}.
+
+
+═══════════════════════════════════════════════════════════════════
+PDF 4 DE 6
+Archivo: guia-ecuaciones-diferenciales-ordinarias.pdf
+═══════════════════════════════════════════════════════════════════
+
+Actúa como un profesor universitario de ecuaciones diferenciales experto en LaTeX y pedagogía científica.
+
+Genera el código LaTeX COMPLETO y COMPILABLE en pdflatex de una guía de estudio titulada:
+
+"Guía de Estudio: Ecuaciones Diferenciales Ordinarias"
+Subtítulo: Primer y Segundo Orden — Métodos y Aplicaciones
+
+ESTRUCTURA OBLIGATORIA DEL DOCUMENTO:
+
+────────────────────────────────────────
+PARTE 1 — RESUMEN CONCEPTUAL
+────────────────────────────────────────
+Redacta explicaciones claras de:
+
+- Clasificación de EDO: orden, grado, linealidad, homogeneidad. Ejemplos de cada tipo.
+- EDO de variables separables: método de separación, condiciones, solución general y particular
+- EDO lineal de primer orden: forma estándar dy/dx + P(x)y = Q(x), factor integrante μ(x) = e^∫P dx
+- EDO exactas: condición ∂M/∂y = ∂N/∂x, método de solución, factor integrante cuando no es exacta
+- EDO de Bernoulli: forma estándar, sustitución v = y^(1−n), reducción a lineal
+- EDO lineal de 2° orden homogénea con coeficientes constantes: ay'' + by' + cy = 0
+  - Caso 1: discriminante b²−4ac > 0 → raíces reales distintas → y = C₁e^(r₁x) + C₂e^(r₂x)
+  - Caso 2: discriminante = 0 → raíz repetida → y = (C₁ + C₂x)e^(rx)
+  - Caso 3: discriminante < 0 → raíces complejas α±βi → y = e^(αx)(C₁cos βx + C₂sin βx)
+- Método de coeficientes indeterminados: tipos de término forzante y forma de la solución particular
+- Método de variación de parámetros: fórmulas de Lagrange
+- Aplicación 1: oscilador masa-resorte mx'' + bx' + kx = F(t)
+- Aplicación 2: circuito RC/RLC con EDO de 1° y 2° orden
+
+────────────────────────────────────────
+PARTE 2 — FÓRMULAS Y DEFINICIONES CLAVE
+────────────────────────────────────────
+- Solución general EDO lineal 1° orden: y = (1/μ)[∫μQ dx + C]
+- Los 3 casos de EDO 2° orden homogénea con fórmulas explícitas
+- Wronskiano W(y₁,y₂) = y₁y₂' − y₂y₁' y su uso
+- Variación de parámetros: u₁' = −y₂g/W, u₂' = y₁g/W
+- Tabla de formas de yₚ para coeficientes indeterminados
+
+────────────────────────────────────────
+PARTE 3 — EJERCICIOS RESUELTOS PASO A PASO
+────────────────────────────────────────
+Incluye exactamente 12 ejercicios resueltos. Distribución por nivel:
+
+NIVEL ESCOLAR/INTRODUCTORIO (ejercicios 1 a 5):
+- Ej 1: Separable: dy/dx = xy, con condición inicial y(0) = 2
+- Ej 2: Separable: dy/dx = y²sin(x), encontrar solución general
+- Ej 3: Lineal 1° orden: dy/dx + 2y = 4x, con y(0) = 1
+- Ej 4: EDO 2° orden: y'' − 5y' + 6y = 0 (raíces reales distintas)
+- Ej 5: EDO 2° orden: y'' − 4y' + 4y = 0 (raíz repetida)
+
+NIVEL UNIVERSITARIO (ejercicios 6 a 12):
+- Ej 6: EDO exacta: (2xy + y²)dx + (x² + 2xy)dy = 0
+- Ej 7: Bernoulli: dy/dx + y/x = x²y³
+- Ej 8: EDO 2° orden: y'' + 4y = 0 (raíces complejas), con condiciones iniciales
+- Ej 9: No homogénea: y'' − 3y' + 2y = e^(3x) (coeficientes indeterminados)
+- Ej 10: No homogénea: y'' + y = sec(x) (variación de parámetros)
+- Ej 11: Aplicación masa-resorte: m=1, b=0, k=4, F(t)=cos(2t) → resonancia
+- Ej 12: Aplicación circuito RC: R=100Ω, C=0.01F, V(t)=12V, encontrar q(t) e I(t)
+
+Para CADA ejercicio:
+\textbf{Enunciado:} [texto con datos]
+\textbf{Clasificación:} [tipo de EDO identificado]
+\textbf{Método:} [nombre del método a usar con justificación breve]
+\textbf{Solución:} Paso 1 → ... → Paso N
+\textbf{Resultado:} \boxed{...}
+\textbf{Nota:} [observación sobre el comportamiento de la solución]
+
+────────────────────────────────────────
+CONFIGURACIÓN LaTeX OBLIGATORIA: (idéntica al PDF 1)
+────────────────────────────────────────
+Mismos paquetes, mismo estilo, mismo encabezado.
+Color principal azulacad = RGB(26,58,110).
+Compilable en pdflatex sin errores.
+
+Responde ÚNICAMENTE con el código LaTeX completo. Empieza con \documentclass y termina con \end{document}.
+
+
+═══════════════════════════════════════════════════════════════════
+PDF 5 DE 6
+Archivo: resumen-termodinamica-leyes-fundamentales.pdf
+═══════════════════════════════════════════════════════════════════
+
+Actúa como un profesor universitario de física y termodinámica experto en LaTeX y pedagogía científica.
+
+Genera el código LaTeX COMPLETO y COMPILABLE en pdflatex de una guía de estudio titulada:
+
+"Resumen y Guía: Termodinámica — Leyes Fundamentales"
+Subtítulo: Principios, Ciclos y Entropía
+
+ESTRUCTURA OBLIGATORIA DEL DOCUMENTO:
+
+────────────────────────────────────────
+PARTE 1 — RESUMEN CONCEPTUAL
+────────────────────────────────────────
+Redacta explicaciones claras de:
+
+- Conceptos base: sistema termodinámico, frontera, entorno, estado, proceso, equilibrio térmico
+- Ley cero: definición de temperatura como propiedad física fundamental
+- Primera ley: ΔU = Q − W
+  - Convención de signos (Q > 0 calor absorbido, W > 0 trabajo hecho por el sistema)
+  - Procesos especiales para gas ideal: isotérmico, isobárico, isocórico, adiabático
+  - Calores específicos Cv y Cp, relación de Mayer: Cp − Cv = R
+  - Gas ideal: U depende solo de T, relaciones pV = nRT
+- Segunda ley:
+  - Enunciado de Kelvin-Planck (imposibilidad de motor perfecto)
+  - Enunciado de Clausius (imposibilidad de refrigerador perfecto)
+  - Ciclo de Carnot: las 4 etapas, diagrama p-V cualitativo, eficiencia η = 1 − Tc/Th
+  - Eficiencia de Carnot como máxima eficiencia posible
+- Entropía:
+  - Definición: dS = δQ_rev / T
+  - Principio de aumento de entropía: ΔS_universo ≥ 0
+  - Variación de entropía de gas ideal: ΔS = nCv ln(T₂/T₁) + nR ln(V₂/V₁)
+  - Interpretación estadística: S = k_B ln Ω (mención breve)
+- Tercera ley: S → 0 cuando T → 0 K
+- Energía libre de Gibbs G = H − TS y su relación con espontaneidad
+
+────────────────────────────────────────
+PARTE 2 — FÓRMULAS Y DEFINICIONES CLAVE
+────────────────────────────────────────
+- Primera ley: ΔU = Q − W y formas para cada proceso especial
+- Trabajo en cada proceso: isotérmico W=nRT ln(V₂/V₁), isobárico W=pΔV, isocórico W=0
+- Eficiencia de Carnot: η = 1 − Tc/Th = W_neto/Q_h
+- ΔS gas ideal (fórmula completa)
+- Relación de Mayer: Cp − Cv = R
+- Tabla resumen: proceso → Q, W, ΔU, ΔS
+
+────────────────────────────────────────
+PARTE 3 — EJERCICIOS RESUELTOS PASO A PASO
+────────────────────────────────────────
+Incluye exactamente 10 ejercicios resueltos. Distribución por nivel:
+
+NIVEL ESCOLAR/INTRODUCTORIO (ejercicios 1 a 4):
+- Ej 1: Un gas ideal absorbe 500 J de calor y realiza 200 J de trabajo. Calcular ΔU.
+- Ej 2: 2 mol de gas ideal a 300K se expanden isobáricamente hasta duplicar su volumen. Calcular Q, W y ΔU. (Usar Cp = 5R/2 para gas monoatómico)
+- Ej 3: Un motor de Carnot opera entre 500K y 300K. Calcular la eficiencia y el trabajo por cada 1000J absorbidos.
+- Ej 4: Calcular ΔS cuando 1 kg de agua a 0°C recibe calor hasta llegar a 100°C a presión constante. (Cp agua = 4186 J/kg·K)
+
+NIVEL UNIVERSITARIO (ejercicios 5 a 10):
+- Ej 5: 1 mol de gas ideal monoatómico se somete a un ciclo: expansión isotérmica (T=400K, V₁→2V₁), compresión isobárica (regreso), proceso isocórico de cierre. Calcular Q, W, ΔU y η para el ciclo.
+- Ej 6: Calcular la variación de entropía en la expansión isotérmica del ejercicio anterior. Verificar ΔS_ciclo = 0.
+- Ej 7: Un gas ideal diatómico (Cv = 5R/2) pasa de (T₁=300K, V₁=10L) a (T₂=600K, V₂=40L). Calcular ΔS con la fórmula de gas ideal.
+- Ej 8: Ciclo de Otto (motor de gasolina idealizado): dado volumen de compresión r=8 y γ=1.4, calcular la eficiencia térmica η = 1 − r^(1−γ).
+- Ej 9: Demostrar que ΔS_universo > 0 para una transferencia irreversible de calor Q entre dos reservorios a T_h y T_c (T_h > T_c).
+- Ej 10: Calcular ΔG = ΔH − TΔS para una reacción con ΔH = −286 kJ/mol y ΔS = −163 J/mol·K a T = 298K. Determinar si la reacción es espontánea.
+
+Para CADA ejercicio:
+\textbf{Enunciado:} [datos]
+\textbf{Ley/Principio aplicado:} [identificar]
+\textbf{Solución:} Paso 1 → ... → Paso N (con sustitución numérica explícita)
+\textbf{Resultado:} \boxed{...}
+\textbf{Interpretación física:} [1-2 líneas de significado termodinámico]
+
+────────────────────────────────────────
+CONFIGURACIÓN LaTeX OBLIGATORIA: (idéntica al PDF 1)
+────────────────────────────────────────
+Mismos paquetes, mismo estilo, mismo encabezado.
+Color principal azulacad = RGB(26,58,110).
+Compilable en pdflatex sin errores.
+
+Responde ÚNICAMENTE con el código LaTeX completo. Empieza con \documentclass y termina con \end{document}.
+
+
+═══════════════════════════════════════════════════════════════════
+PDF 6 DE 6
+Archivo: guia-trigonometria-escolar.pdf
+═══════════════════════════════════════════════════════════════════
+
+Actúa como un profesor de matemáticas escolares experto en LaTeX y pedagogía accesible.
+
+Genera el código LaTeX COMPLETO y COMPILABLE en pdflatex de una guía de estudio titulada:
+
+"Guía de Estudio: Trigonometría Completa"
+Subtítulo: Educación Media y Preparación PAES
+
+ESTRUCTURA OBLIGATORIA DEL DOCUMENTO:
+
+────────────────────────────────────────
+PARTE 1 — RESUMEN CONCEPTUAL
+────────────────────────────────────────
+Redacta explicaciones en lenguaje CLARO Y ACCESIBLE (nivel escolar) de:
+
+- El triángulo rectángulo y la regla SOH-CAH-TOA explicada con palabras simples y un diagrama en TikZ (triángulo etiquetado con hipotenusa, cateto opuesto, cateto adyacente)
+- Las 6 razones trigonométricas: sin, cos, tan, csc, sec, cot — definición y relación entre ellas
+- El círculo unitario: definición, relación con sin y cos, diagrama TikZ con los 4 cuadrantes y ángulos principales marcados (0°, 90°, 180°, 270°, 360°)
+- Ángulos especiales y sus valores EXACTOS: tabla completa 0°, 30°, 45°, 60°, 90° con sin, cos y tan
+- Signos por cuadrante: regla ASTC (Todos, Seno, Tangente, Coseno) con diagrama
+- Ángulos de referencia: cómo encontrar el valor de sin(150°), cos(210°), etc.
+- Identidades fundamentales:
+  sin²θ + cos²θ = 1 y sus formas equivalentes: 1 + tan²θ = sec²θ y cot²θ + 1 = csc²θ
+- Identidades de ángulo doble: sin(2θ) = 2sin θ cos θ, cos(2θ) = cos²θ − sin²θ
+- Identidades de suma: sin(A±B) y cos(A±B)
+- Funciones trigonométricas:
+  - Gráfica de y = A sin(Bx + C) + D: amplitud |A|, período 2π/B, desfase −C/B, desplazamiento D
+  - Parámetros equivalentes para coseno
+- Ley del seno: a/sin A = b/sin B = c/sin C
+- Ley del coseno: c² = a² + b² − 2ab cos C
+- Ecuaciones trigonométricas simples: sin(x) = a → x = arcsin(a) + 2πk y x = π − arcsin(a) + 2πk
+
+────────────────────────────────────────
+PARTE 2 — FÓRMULAS Y DEFINICIONES CLAVE
+────────────────────────────────────────
+1. Tabla de ángulos especiales con valores exactos (booktabs), incluyendo 120°, 135°, 150°, 180°
+2. Las identidades pitagóricas en recuadro tcolorbox amarillo o verde
+3. Fórmulas de ley del seno y coseno destacadas
+4. Tabla de signos por cuadrante (+ o − de cada razón en cada cuadrante)
+
+────────────────────────────────────────
+PARTE 3 — EJERCICIOS RESUELTOS PASO A PASO
+────────────────────────────────────────
+Incluye exactamente 14 ejercicios resueltos. Distribución por nivel:
+
+NIVEL ESCOLAR BÁSICO (ejercicios 1 a 6):
+- Ej 1: Dado triángulo rectángulo con cateto opuesto = 3 y hipotenusa = 5. Calcular sin θ, cos θ y tan θ. Verificar la identidad pitagórica.
+- Ej 2: Calcular el valor exacto de sin(60°)·cos(30°) + cos(60°)·sin(30°). ¿Qué identidad confirma el resultado?
+- Ej 3: Simplificar la expresión (sin²x + cos²x) / cos²x usando identidades.
+- Ej 4: Determinar el signo de sin(210°), cos(300°) y tan(135°) usando la regla ASTC. Calcular su valor exacto.
+- Ej 5: Un triángulo tiene lados a=7, b=10 y ángulo C=60°. Calcular el lado c usando la ley del coseno.
+- Ej 6: Resolver la ecuación trigonométrica: 2sin(x) − 1 = 0 para x ∈ [0°, 360°].
+
+NIVEL ESCOLAR AVANZADO / PREUNIVERSITARIO (ejercicios 7 a 14):
+- Ej 7: Calcular sin(75°) usando identidad de suma sin(45°+30°). Dejar en forma exacta.
+- Ej 8: Dado cos θ = −3/5 con θ en el segundo cuadrante. Calcular sin θ, tan θ, sin(2θ) y cos(2θ).
+- Ej 9: Demostrar la identidad: (1 − cos²x)/sin x = sin x.
+- Ej 10: Demostrar la identidad: tan x + cot x = 1/(sin x · cos x).
+- Ej 11: La función f(x) = 3sin(2x − π/4) + 1. Identificar amplitud, período, desfase y desplazamiento vertical. Describir la gráfica.
+- Ej 12: En un triángulo ABC: a=8, A=45°, B=75°. Usar ley del seno para encontrar b y c.
+- Ej 13: Resolver: cos(2x) = cos(x) para x ∈ [0°, 360°]. (Usar identidad de ángulo doble)
+- Ej 14: Resolver: 2cos²x − cos x − 1 = 0 para x ∈ [0°, 2π]. (Factorizar como cuadrática en cos x)
+
+Para CADA ejercicio en este PDF (tono más accesible y didáctico):
+\textbf{Enunciado:} [texto claro]
+\textbf{Solución:}
+  Paso 1 — [nombre descriptivo]: [explicación simple + operación]
+  Paso 2 — ...
+\textbf{Resultado:} \boxed{...}
+\colorbox{yellow!20}{\textbf{Tip:} [consejo de 1 línea para recordar este tipo de ejercicio]}
+
+────────────────────────────────────────
+CONFIGURACIÓN LaTeX OBLIGATORIA:
+────────────────────────────────────────
+\documentclass[12pt,a4paper]{article}
+
+Paquetes:
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{lmodern}
+\usepackage[top=2.5cm,bottom=2.5cm,left=2.8cm,right=2.8cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{tikz}            % para diagramas del triángulo y círculo unitario
+\usetikzlibrary{angles,quotes,calc}
+
+Color tcolorbox para tips: fondo amarillo claro (yellow!15)
+Color secciones: azulacad = RGB(26,58,110)
+Estilo visual más amigable que los otros PDFs (este es para estudiantes de media)
+Encabezado: título + "Tutorías de Matemáticas y Física — Valparaíso"
+Pie de página numerado, tabla de contenidos al inicio.
+Compilable en pdflatex SIN ERRORES.
+
+Responde ÚNICAMENTE con el código LaTeX completo. Empieza con \documentclass y termina con \end{document}.
+
+
+═══════════════════════════════════════════════════════════════════
+FIN DEL PROMPT MAESTRO
+Recuerda: una conversación nueva en DeepSeek por cada PDF.
+Si DeepSeek corta el código, escribe: "continúa desde donde quedaste"
+Para compilar: overleaf.com (gratuito, sin instalación)
+═══════════════════════════════════════════════════════════════════
