@@ -1125,3 +1125,117 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   .cta-agendar__actions { width: 100%; }
   .cta-agendar__actions .btn { width: 100%; justify-content: center; }
 }
+
+/* ═══════════════════════════════════════════════
+   PAES
+   ═══════════════════════════════════════════════ */
+.paes { background: var(--bg-card); border-top: 1px solid var(--border); }
+
+.paes__experience {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+.paes__exp-badge {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: var(--accent-light);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-lg);
+  padding: 20px 28px;
+  max-width: 600px;
+}
+.paes__exp-icon { font-size: 1.8rem; flex-shrink: 0; margin-top: 2px; }
+.paes__exp-badge strong {
+  display: block;
+  color: var(--accent);
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+.paes__exp-badge span {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.paes__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+.paes-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  transition: all 0.2s;
+}
+.paes-card:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+.paes-card--highlight {
+  background: var(--accent-light);
+  border-color: var(--accent);
+}
+.paes-card__subject {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-2);
+  margin-bottom: 10px;
+}
+.paes-card__icon { font-size: 1.1rem; }
+.paes-card__title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--ink);
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+.paes-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.paes-card__list li {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  padding-left: 14px;
+  position: relative;
+  line-height: 1.5;
+}
+.paes-card__list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.paes__cta {
+  text-align: center;
+  padding: 40px;
+  background: var(--bg-tint);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  margin-bottom: 28px;
+}
+.paes__cta p {
+  font-size: 1rem;
+  color: var(--ink-soft);
+  margin-bottom: 20px;
+}
+
+@media (max-width: 900px) {
+  .paes__grid { grid-template-columns: 1fr; }
+  .paes__exp-badge { flex-direction: column; }
+}
